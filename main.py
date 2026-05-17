@@ -10,9 +10,6 @@ def main():
     game_manager = Game_Manager(80,25) # Pass in Width Height
     game_manager.world_gen()
     while True:
-        # Update
-        game_manager.update_player()
-
         # Render
         game_manager.render_game()
 
