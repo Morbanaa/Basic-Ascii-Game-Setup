@@ -14,6 +14,8 @@ class Game_Manager():
             for x in range(self.game_width):
                 if y == 0 or y == self.game_height -1 or x == 0 or x == self.game_width -1:
                     row.append("@")
+                else:
+                    row.append(" ")
             self.game_map.append(row)
 
     # Renders world each frame of game
