@@ -3,7 +3,6 @@
 # Basic Ascii Game Setup
 
 import sys
-import keyboard
 from player import Player
 
 # Colors
