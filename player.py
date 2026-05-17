@@ -1,3 +1,7 @@
+# Teddy Rodd
+# Morbanaa Studios
+# Basic Ascii Game Setup
+
 import keyboard
 
 class Player():
