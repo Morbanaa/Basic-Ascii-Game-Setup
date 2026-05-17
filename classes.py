@@ -1,3 +1,7 @@
+# Teddy Rodd
+# Morbanaa Studios
+# Basic Ascii Game Setup
+
 import sys
 import keyboard
 
@@ -33,11 +37,24 @@ class Game_Manager():
     def clear_move_cursor(self):
         sys.stdout.write("\033[H")
         sys.stdout.flush()
+    
+    # Player Movement
+    def update_player(self):
+        # Move Up
+        if keyboard.is_pressed("W") and self.game_map[self.player.ypos -1][self.player.xpos] != "@":
+            self.player.ypos -= 1
+        # Move Down
+        if keyboard.is_pressed("S") and self.game_map[self.player.ypos + 1][self.player.xpos] != "@":
+            self.player.ypos += 1
+        # Move Left
+        if keyboard.is_pressed("A") and self.game_map[self.player.ypos][self.player.xpos -1] != "@":
+            self.player.xpos -= 1
+        # Move Right
+        if keyboard.is_pressed("D") and self.game_map[self.player.ypos][self.player.xpos +1] != "@":
+            self.player.xpos += 1
 
 class Player():
     def __init__(self,xpos,ypos):
         self.xpos = xpos
         self.ypos = ypos
-
-    
             
