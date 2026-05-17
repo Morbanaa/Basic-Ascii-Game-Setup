@@ -5,6 +5,11 @@
 import sys
 import keyboard
 
+# Colors
+GREEN        = '\033[32m'
+# Reset Color
+ENDC = '\033[0m'
+
 class Game_Manager():
     def __init__(self,game_width,game_height):
         self.game_width = game_width
@@ -28,7 +33,7 @@ class Game_Manager():
         for y in range(self.game_height):
             for x in range(self.game_width):
                 if y == self.player.ypos and x == self.player.xpos:
-                    print("P",end="")
+                    print(f"{GREEN}P{ENDC}",end="")
                 else:
                     print(self.game_map[y][x],end="")
             print()
