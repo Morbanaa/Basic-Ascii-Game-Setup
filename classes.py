@@ -1,4 +1,5 @@
 import sys
+import keyboard
 
 class Game_Manager():
     def __init__(self,game_width,game_height):
@@ -22,7 +23,10 @@ class Game_Manager():
     def render_game(self):
         for y in range(self.game_height):
             for x in range(self.game_width):
-                print(self.game_map[y][x],end="")
+                if y == self.player.ypos and x == self.player.xpos:
+                    print("P",end="")
+                else:
+                    print(self.game_map[y][x],end="")
             print()
 
     # Sets screen for next frame
@@ -34,3 +38,6 @@ class Player():
     def __init__(self,xpos,ypos):
         self.xpos = xpos
         self.ypos = ypos
+
+    
+            
