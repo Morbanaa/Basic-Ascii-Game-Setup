@@ -20,10 +20,13 @@ class Game_Manager():
 
     # Renders world each frame of game
     def render_game(self):
-        pass
+        for y in range(self.game_height):
+            for x in range(self.game_width):
+                print("@",end="")
+            print()
 
     # Sets screen for next frame
-    def clear_move_cursor():
+    def clear_move_cursor(self):
         sys.stdout.write("\033[H")
         sys.stdout.flush()
 
