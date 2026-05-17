@@ -22,7 +22,7 @@ class Game_Manager():
     def render_game(self):
         for y in range(self.game_height):
             for x in range(self.game_width):
-                print("@",end="")
+                print(self.game_map[y][x],end="")
             print()
 
     # Sets screen for next frame
