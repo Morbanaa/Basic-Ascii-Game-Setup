@@ -5,10 +5,16 @@ class Game_Manager():
         self.game_width = game_width
         self.game_height = game_height
         self.player = Player(game_width//2,game_height//2)
+        self.game_map = []
 
     # Creates world onces at start of game
     def world_gen(self):
-        pass
+        for y in range(self.game_height):
+            row = []
+            for x in range(self.game_width):
+                if y == 0 or y == self.game_height -1 or x == 0 or x == self.game_width -1:
+                    row.append("@")
+            self.game_map.append(row)
 
     # Renders world each frame of game
     def render_game(self):
